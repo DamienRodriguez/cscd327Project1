@@ -31,4 +31,15 @@ public class DictHashTable
     	this.table = new Object[capacity];
     	this.numElem = 0;
     }
+    
+    private int hash(Object key)
+    {
+    	int result = 3;
+    	char array[] = key.toString().toLowercase().toCharArray();
+    	for(int x = 0; x < charArray.length; x++)
+    	{
+    		result += ((int)(charArray[x])) * 3;
+    	}
+    	return (result%this.tableCapacity)
+    }
 }//END DICTHASHTABLE

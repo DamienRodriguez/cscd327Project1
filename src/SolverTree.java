@@ -4,10 +4,10 @@ public class SolverTree
 {
     private class Node
     {
-        Map<Character, Node> child1 = new TreeMap<>();
-        Map<Character, Node> child2 = new TreeMap<>();
-        Map<Character, Node> child3 = new TreeMap<>();
-        Map<Character, Node> child4 = new TreeMap<>();
+        private Node c1;
+        private Node c2;
+        private Node c3;
+        private Node c4;
 
         boolean aword = false;
     }
