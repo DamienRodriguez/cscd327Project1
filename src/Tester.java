@@ -3,7 +3,7 @@ import java.io.File;
 
 public class Tester
 {
-    public static void main(String[] args) throws Exception
+    public static void main(String args[]) throws Exception
     {
         File dictionary = new File("dictionary.txt");
         Scanner fin = new Scanner(dictionary);
