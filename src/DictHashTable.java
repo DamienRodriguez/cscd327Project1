@@ -24,11 +24,22 @@ public class DictHashTable
     
     private int tableCapacity = 100000;
     private int numElem;
-    private obj[] table;
+    private Object[] table;
     
     public DictHashTable(int capacity)
     {
     	this.table = new Object[capacity];
     	this.numElem = 0;
+    }
+    
+    private int hash(Object key)
+    {
+    	int result = 3;
+    	char array[] = key.toString().toLowercase().toCharArray();
+    	for(int x = 0; x < charArray.length; x++)
+    	{
+    		result += ((int)(charArray[x])) * 3;
+    	}
+    	return (result%this.tableCapacity)
     }
 }//END DICTHASHTABLE
