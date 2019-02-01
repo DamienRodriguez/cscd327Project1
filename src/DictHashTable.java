@@ -24,7 +24,7 @@ public class DictHashTable
     
     private int tableCapacity = 100000;
     private int numElem;
-    private obj[] table;
+    private Object[] table;
     
     public DictHashTable(int capacity)
     {

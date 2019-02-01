@@ -11,5 +11,4 @@ public class SolverTree
 
         boolean aword = false;
     }
-
 }
