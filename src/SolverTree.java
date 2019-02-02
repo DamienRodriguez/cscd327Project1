@@ -11,4 +11,10 @@ public class SolverTree
 
         boolean aword = false;
     }
+
+    private Node root;
+    public SolverTree(String s)
+    {
+        
+    }
 }
