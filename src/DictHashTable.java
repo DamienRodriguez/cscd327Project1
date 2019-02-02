@@ -83,6 +83,22 @@ public class DictHashTable
 		}
 	}
     
+    public void remove(Object key) {
+		int pos = this.hash(key);
+
+		if (this.table[pos] != null) {
+			Record node = new Record();
+			node.key = key; 
+			LinkedList<Record> theList = (LinkedList<Record>) this.table[pos];
+			//
+			boolean removed = theList.remove(node);
+			if( theList.size() == 0 )
+				this.table[pos] = null;
+			if( removed )
+				this.numElements--;
+		}
+	}
+    
     public Object get(Object key) {
         int index = hash(key);
         
