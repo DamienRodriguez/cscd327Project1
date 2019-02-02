@@ -51,9 +51,9 @@ public class DictHashTable
     	char array[] = key.toString().toLowerCase().toCharArray();
     	for(int x = 0; x < array.length; x++)
     	{
-    		result += ((int)(charArray[x])) * 3;
+    		result += ((int)(array[x])) * 3;
     	}
-    	return (result % this.table.length)
+    	return (result % this.table.length);
     }
     
     public void put(Object key, Object data) {

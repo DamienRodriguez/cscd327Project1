@@ -1,5 +1,7 @@
 import java.util.*;
 
+//Created by Damien Rodriguez, with Partner Ryan Bucherl
+
 public class DictPrefixTree
 {
     private class Node
