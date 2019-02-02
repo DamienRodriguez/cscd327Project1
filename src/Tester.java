@@ -16,6 +16,6 @@ public class Tester
             dictTree.insertString(line[0]);
         } //this should have the whole tree created
 
-       // dictTree.printSorted();       //uncomment this line to see that we successfully created our dictionary Tree
+        dictTree.printSorted();       //uncomment this line to see that we successfully created our dictionary Tree
     }
 }
