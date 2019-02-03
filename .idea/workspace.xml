@@ -28,9 +28,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SolverTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-            </state>
+            <state relative-caret-position="-379" />
           </provider>
         </entry>
       </file>
@@ -93,7 +91,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="87" />
     <option name="y" value="-20" />
     <option name="width" value="1373" />
@@ -273,9 +271,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SolverTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-        </state>
+        <state relative-caret-position="-379" />
       </provider>
     </entry>
   </component>
