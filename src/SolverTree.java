@@ -13,7 +13,33 @@ public class SolverTree
 
         String letter;
         boolean aword = false;
-
+        
+        private Node()
+        {
+        	letter = null;
+        	c1 = null;
+        	c2 = null;
+        	c3 = null;
+        	c4 = null;
+        }
+        
+        private Node(String letter, Node n1, Node n2, Node n3 )
+        {
+        	this.letter = letter;
+        	c1 = n1;
+        	c2 = n2;
+        	c3 = n3;
+        	c4 = null;
+        }
+        
+        private Node(String letter, Node n1, Node n2, Node n3, Node n4)
+        {
+        	this.letter = letter;
+        	c1 = n1;
+        	c2 = n2;
+        	c3 = n3;
+        	c4 = n4;
+        }
     }
 
     private Node root;
@@ -47,5 +73,10 @@ public class SolverTree
 
         return null;
 
+    }
+    
+    private Node constructorHelper(String s)
+    {
+    	
     }
 }
