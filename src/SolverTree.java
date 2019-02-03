@@ -12,6 +12,7 @@ public class SolverTree
         private Node c4;
 
         String letter;
+
         boolean aword = false;
 
     }
