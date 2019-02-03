@@ -5,7 +5,7 @@ public class SolverTree
     String[] keyPadLetters = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     private class Node {
-        
+
         private Node c1;
         private Node c2;
         private Node c3;
@@ -41,11 +41,9 @@ public class SolverTree
         int indexOf;
 
         do{
-            indexOf = Integer.parseInt(copy.charAt(0) + "");
+            indexOf = Integer.parseInt(copy.charAt(0) + "") - 2;
 
         }while(q.size() != 0);
-
-
 
         return null;
 
