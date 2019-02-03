@@ -27,6 +27,8 @@ public class Queue {
         this.size = 0;
     }
 
+    public int size() {return this.size;}
+
     public void enqueue(Object o) {
 
         Node nn = new Node(o);

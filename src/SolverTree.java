@@ -2,16 +2,7 @@ import java.util.*;
 
 public class SolverTree
 {
-    String numPad2 = "abc";
-    String numPad3 = "def";
-    String numPad4 = "ghi";
-    String numPad5 = "jkl";
-    String numPad6 = "mno";
-    String numPad7 = "pqrs";
-    String numPad8 = "tuv";
-    String numPad9 = "wxyz";
-
-
+    String[] keyPadLetters = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     private class Node
     {
@@ -20,7 +11,9 @@ public class SolverTree
         private Node c3;
         private Node c4;
 
+        String letter;
         boolean aword = false;
+
     }
 
     private Node root;
@@ -34,11 +27,27 @@ public class SolverTree
         // number 2 (d,e,f)
         // we would dequeue first element, then we would create its child nodes as d,e,f. and then queue them
         // in that order. then continue with b, and create child nodes.
-        // nodes would look like the following: aa, ab, ac
+        // nodes would look like the following:
 
-        //root
         // a, b, c
         // d e f, d e f, d e f
+
+    }
+
+    private SolverTree.Node actualConstructor(final String s) {
+
+        Queue q = new Queue();
+        String copy = s;
+        int indexOf;
+
+        do{
+            indexOf = Integer.parseInt(copy.charAt(0) + "");
+
+        }while(q.size() != 0);
+
+
+
+        return null;
 
     }
 }
