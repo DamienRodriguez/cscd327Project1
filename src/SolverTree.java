@@ -12,6 +12,7 @@ public class SolverTree
         private Node c4;
 
         String letter;
+
         boolean aword = false;
         
         private Node()
@@ -69,21 +70,6 @@ public class SolverTree
         Queue temp = new Queue();
         temp.enqueue(this.root);
         constructorHelper(s, temp, 0);
-    }
-
-    private SolverTree.Node actualConstructor(final String s) {
-
-        Queue q = new Queue();
-        String copy = s;
-        int indexOf;
-
-        do{
-            indexOf = Integer.parseInt(copy.charAt(0) + "") - 2;
-
-        }while(q.size() != 0);
-
-        return null;
-
     }
     
     private void constructorHelper(String s, Queue wack, int level)
