@@ -4,8 +4,8 @@ public class SolverTree
 {
     String[] keyPadLetters = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
-    private class Node
-    {
+    private class Node {
+        
         private Node c1;
         private Node c2;
         private Node c3;
@@ -17,8 +17,8 @@ public class SolverTree
     }
 
     private Node root;
-    public SolverTree(String s)
-    {
+    public SolverTree(String s) {
+
         this.root = null;
         // first root node
         // number 1
