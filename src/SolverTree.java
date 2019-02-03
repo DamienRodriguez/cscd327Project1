@@ -60,21 +60,6 @@ public class SolverTree
         // d e f, d e f, d e f
 
     }
-
-    private SolverTree.Node actualConstructor(final String s) {
-
-        Queue q = new Queue();
-        String copy = s;
-        int indexOf;
-
-        do{
-            indexOf = Integer.parseInt(copy.charAt(0) + "") - 2;
-
-        }while(q.size() != 0);
-
-        return null;
-
-    }
     
     private Node constructorHelper(String s)
     {
