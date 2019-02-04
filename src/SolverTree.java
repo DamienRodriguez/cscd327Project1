@@ -53,6 +53,7 @@ public class SolverTree
     }
 
     private Node root;
+    private int numLevels;
     public SolverTree(String s) {
 
         this.root = new Node();
@@ -103,5 +104,7 @@ public class SolverTree
     		}//end for loop
     		constructorHelper(s.substring(1), wack, level + 1);
     	}//end null string if statement
+    	else
+    		this.numLevels = level;
     }//end constructorHelper
 }
