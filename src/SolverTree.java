@@ -29,6 +29,7 @@ public class SolverTree
         	c2 = null;
         	c3 = null;
         	c4 = null;
+        	aword = true;
         }
     }
 
@@ -68,6 +69,7 @@ public class SolverTree
     					temp.c1 = new Node(set.substring(0,1));
     					temp.c2 = new Node(set.substring(1,2));
     					temp.c3 = new Node(set.substring(2));
+    					temp.c4 = new Node();
     				}
     				else
     				{
