@@ -41,13 +41,13 @@ public class SolverTree
         // first root node
         // number 1
         // we would create 3 child nodes a, b, and c, then queue all of those into a queue
-        // take second number
-        // number 2 (d,e,f)
-        // we would dequeue first element, then we would create its child nodes as d,e,f. and then queue them
-        // in that order. then continue with b, and create child nodes.
-        // nodes would look like the following:
-
-        // a, b, c
+        //        // take second number
+        //        // number 2 (d,e,f)
+        //        // we would dequeue first element, then we would create its child nodes as d,e,f. and then queue them
+        //        // in that order. then continue with b, and create child nodes.
+        //        // nodes would look like the following:
+        //
+        //        // a, b, c
         // d e f, d e f, d e f
         Queue temp = new Queue();
         temp.enqueue(this.root);
@@ -109,7 +109,7 @@ public class SolverTree
 
         } else {
 
-            if(level == numLevels)
+            if(level == numLevels && s.length() == numLevels)
                 q.enqueue(s);
         }
     }
