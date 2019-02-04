@@ -54,4 +54,12 @@ public class Queue {
 
         return cur.data;
     }
+
+    public void printAll()
+    {
+        for(Node cur = this.head; cur != null; cur = cur.next)
+        {
+            System.out.println(cur.data);
+        }
+    }
 }

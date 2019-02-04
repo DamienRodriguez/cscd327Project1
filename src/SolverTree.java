@@ -15,7 +15,7 @@ public class SolverTree
         
         private Node()
         {
-        	letter = null;
+        	letter = "";
         	c1 = null;
         	c2 = null;
         	c3 = null;
@@ -30,27 +30,10 @@ public class SolverTree
         	c3 = null;
         	c4 = null;
         }
-        
-        private Node(String letter, Node n1, Node n2, Node n3 )
-        {
-        	this.letter = letter;
-        	c1 = n1;
-        	c2 = n2;
-        	c3 = n3;
-        	c4 = null;
-        }
-        
-        private Node(String letter, Node n1, Node n2, Node n3, Node n4)
-        {
-        	this.letter = letter;
-        	c1 = n1;
-        	c2 = n2;
-        	c3 = n3;
-        	c4 = n4;
-        }
     }
 
     private Node root;
+    private int numLevels;
     public SolverTree(String s) {
 
         this.root = new Node();
@@ -76,11 +59,11 @@ public class SolverTree
     	{
     		for(int x = 0; x < (int)(Math.pow(4,level)); x++)
     		{
-    			Node temp = wack.dequeue();
+    			Node temp = (SolverTree.Node)wack.dequeue();
     			if(temp != null)
     			{
-    				String set = keyPadLetters(Integer.parseInt(s.substring(0,1)) - 2);
-    				if(set.length == 3)
+    				String set = keyPadLetters[Integer.parseInt(s.substring(0,1)) - 2];
+    				if(set.length() == 3)
     				{
     					temp.c1 = new Node(set.substring(0,1));
     					temp.c2 = new Node(set.substring(1,2));
@@ -101,5 +84,31 @@ public class SolverTree
     		}//end for loop
     		constructorHelper(s.substring(1), wack, level + 1);
     	}//end null string if statement
+        else
+            this.numLevels = level;
     }//end constructorHelper
+
+    public Queue allPaths()
+    {
+        Queue temp = new Queue();
+        allPaths(temp, 0, "", this.root);
+
+        return temp;
+    }
+
+    private void allPaths(Queue q, int level, String s, Node root) {
+
+        if(root != null) {
+
+            allPaths(q, level++, s + root.letter, root.c1);
+            allPaths(q, level++, s + root.letter, root.c2);
+            allPaths(q, level++, s + root.letter, root.c3);
+            allPaths(q, level++, s + root.letter, root.c4);
+
+        } else {
+
+            if(level == numLevels)
+                q.enqueue(s);
+        }
+    }
 }

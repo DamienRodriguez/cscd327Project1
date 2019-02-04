@@ -7,7 +7,6 @@ public class Tester {
 
         File dictionary = new File("dictionary.txt");
         Scanner fin = new Scanner(dictionary);
-        Scanner fin2 = new Scanner(dictionary);
 
         DictPrefixTree dictTree = new DictPrefixTree();
         DictHashTable dictHash = new DictHashTable(100000);
@@ -17,17 +16,14 @@ public class Tester {
 
             String[] line = fin.nextLine().split(",");
             dictTree.insertString(line[0]);
+            dictHash.put(line[0], line[1]);
         } //this should have the whole tree created
         fin.close();
 
-        while(fin2.hasNextLine()){
+        SolverTree decoderRing = new SolverTree("234");
 
-            String[] line = fin2.nextLine().split(",");
-            dictHash.put(line[0], line[1]);
-        }
-        fin2.close();
-
-        System.out.println(dictHash);
+        Queue IHOPETHISWORKS = decoderRing.allPaths();
+        IHOPETHISWORKS.printAll();
 
 
 
